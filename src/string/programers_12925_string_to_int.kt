@@ -1,20 +1,20 @@
 package string
 
-class Solution {
-    fun solution(s: String): Int {
-        val cnt = s.length
-
-        //return s.toInt()
-
-        return if (s[0] == '-')
-            -s.slice(1 until cnt).toInt()
+class Solution12925 {
+    fun solution(s: String): String {
+        var cnt = (s.length)/2
+        return if ((s.length) % 2 == 1)
+            s[cnt].toString()
         else
-            s.toInt()
-
+            s.slice(cnt-1..cnt)
     }
+
+    fun solution0(s: String) = s.slice(((s.length - 1) / 2)..(s.length / 2))
+
 }
 
 fun main() {
-    val answer = Solution()
-    println(answer.solution("-3332323"))
+    val answer = Solution12925()
+    println(answer.solution("qwer"))
+    println(answer.solution("abcde"))
 }
