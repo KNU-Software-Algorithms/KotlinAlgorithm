@@ -1,22 +1,22 @@
 package practice
 
-class Solution12928 {
-    fun solution(n: Int): Int {
-        var answer = 0
+class Solution12933 {
+    fun solution(n: Long): Long {
+        var temp = arrayListOf<Char>()
+        var answer = ""
 
-        for (i in 1..n) {
-            if (n % i == 0) {
-                answer += i
-            }
+        n.toString().forEach {
+            temp.add(it)
+        }
+        temp.sorted().reversed().forEach {
+            answer += it
         }
 
-        //answer = (1..n).filter { n % it == 0 }.sum()
-
-        return answer
+        return answer.toLong()
     }
 }
 
 fun main() {
-    val answer = Solution12928()
-    println(answer.solution(4))
+    val answer = Solution12933()
+    println(answer.solution(118372))
 }
