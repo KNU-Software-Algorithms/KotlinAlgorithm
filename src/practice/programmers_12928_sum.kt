@@ -10,7 +10,7 @@ class Solution12928 {
             }
         }
 
-        //answer = (1..n).filter { n % it == 0 }.sum()
+        answer = (1..n).filter { n % it == 0 }.sum()
 
         return answer
     }
